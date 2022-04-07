@@ -24,7 +24,7 @@ const Header = () => {
       </div>
       <div className="flex items-center space-x-5 text-green-600">
         <h3>Signin</h3>
-        <h3 className="border px-4 py-1 border-green-600 rounded-full">
+        <h3 className="border px-4 py-1 border-green-600 rounded-full min-w-fit">
           Get Started
         </h3>
       </div>
