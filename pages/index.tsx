@@ -38,7 +38,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
         />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 lg:p-6">
-        {posts.map((post) => {
+        {posts?.map((post) => {
           return (
             <Link key={post._id} passHref href={`/post/${post.slug.current}`}>
               <div className="border rou group cursor-pointer overflow-hidden ">
@@ -88,7 +88,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
       props: { posts },
     };
   } catch (error: any) {
-    console.log(error.response.body.error.description);
+    console.log(error.response?.body.error.description);
 
     return {
       props: {},
